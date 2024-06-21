@@ -1,0 +1,56 @@
+#form1 div {
+  text-align: center;
+  margin: 8rem;
+  padding-top: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  /* padding: 2rem; */
+  background-color: rgb(50, 25, 50);
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(5,1fr);
+  row-gap: 2rem;  
+}
+#title{
+  text-align: center;
+  font-size: xxx-large;
+  font-weight:600 ;
+  background-color: blueviolet;
+  margin: auto;
+  width: fit-content;
+  padding: 1rem;
+}
+
+input[type="text"] {
+  font-size: 20px;
+  align-self: center;
+}
+
+input[type="checkbox"] {
+  height: 30px;
+  /* align-self:self-start; */
+}
+
+#submitButton {
+  display: block;
+  margin: auto;
+  height: 5rem;
+  width: 5rem;
+}
+
+@media (max-width: 800px) {
+  #form1 div {
+    margin: 2rem;
+    padding: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  input[type="text"], 
+  input[type="email"], 
+  input[type="number"], 
+  input[type="checkbox"] {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
