@@ -1,17 +1,20 @@
 import { useState } from 'react'
 import './App.css'
-useState
 
 function App() {
   // eslint-disable-next-line no-unused-vars
   const[guestIn, setGuestIn]= useState(false)
+  const[submitted, setSubmitted]= useState(false)
+  
+  
 
    function handleGuestStatus(){
     setGuestIn(!guestIn)
    }
-  
+  let userData={} ;
   function handleSubmit(event) {
     event.preventDefault()
+    setSubmitted(true)
     const formData = new FormData(event.target)
     const guestStatus = formData.get('guest')
     const data = Object.fromEntries(formData.entries())
@@ -23,6 +26,7 @@ function App() {
       setGuestIn(true)
       data.guest = true;
     }
+    
     console.log(data)
     }
 
@@ -31,8 +35,9 @@ function App() {
       <header id="title">
         Forms (level 1)
       </header>
+    { !submitted &&
 
-    <form id="form1" onSubmit={handleSubmit}>
+      <form id="form1" onSubmit={handleSubmit}>
       <div>
       <label htmlFor='name'>Name</label>
       <input id='name' name='name' type="text" required></input>
@@ -55,6 +60,15 @@ function App() {
       </div>
       <button id="submitButton" type="submit">Submit</button>
     </form>
+    }
+    {submitted && 
+    <ul>
+      {Object.entries(userData).map(([key, value]) => 
+  <li key={key}>
+    <strong>{key}:</strong> {value}
+  </li>
+      )}
+    </ul>}
     </div>
   )
 }
