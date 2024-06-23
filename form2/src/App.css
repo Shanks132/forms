@@ -1,0 +1,72 @@
+form{
+  border: 1px solid;
+  border-radius: 1px;
+}
+.inputField{
+  margin : 0.2rem;
+  display : grid;
+  grid-template-columns:repeat(3,1fr);
+  gap: 0.3rem;
+  margin-left: 1rem;
+  margin-top: 2rem;
+  font-size: x-large;
+  justify-items: start;
+}
+.inputField label{
+  text-align: left;
+}
+
+.inputField input{
+  width:90%;
+}
+input{
+  font-size: x-large;
+}
+option{
+  font-size: large;
+}
+select{
+  font-size: x-large;
+  
+}
+.inputField div{
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.errorMessage{
+  color: rgb(240, 103, 103);
+}
+#title{
+  font-size: xxx-large;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+@media only screen and (max-width:720px) {
+  .inputField{
+    margin : 0.3rem;
+    display : grid;
+    grid-template-columns:repeat(2,1fr);
+    gap: 0.2rem;
+    margin-left: 0.5rem;
+    margin-top: 2rem;
+    font-size: large;
+    
+  }
+  .inputField label{
+    text-align: left;
+  }
+  
+  .inputField input{
+    width:70%;
+  }
+  input{
+    font-size: large;
+  }
+  option{
+    font-size: large;
+  }
+  select{
+    font-size: large;
+    
+  }
+}
