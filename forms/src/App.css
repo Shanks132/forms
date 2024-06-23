@@ -34,9 +34,6 @@ input[type="checkbox"] {
 
 #submitButton {
   display: block;
-  margin: auto;
-  height: 5rem;
-  width: 5rem;
 }
 
 @media (max-width: 800px) {
